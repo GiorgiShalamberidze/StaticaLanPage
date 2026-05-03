@@ -24,7 +24,7 @@
   --font-body: var(--font-body-default);
   --font-mono: var(--font-mono-default);
   --pad-y: 100px;
-  --container: 1280px;
+  --container: 1380px;
 }
 
 *,
@@ -107,7 +107,7 @@ html[lang="ka"] .section-title {
 }
 
 html[lang="ka"] .footer-title {
-  font-size: clamp(32px, 4vw, 60px);
+  font-size: clamp(30px, 4vw, 57px);
 }
 
 html[lang="ka"] .hero-copy,
@@ -1791,7 +1791,7 @@ svg {
   }
 
   html[lang="ka"] .footer-title {
-    font-size: clamp(30px, 5.8vw, 48px);
+    font-size: clamp(28px, 5.8vw, 45px);
   }
 
   html[lang="ka"] .nav-links {
@@ -2005,7 +2005,7 @@ svg {
 
   html[lang="ka"] .section-title,
   html[lang="ka"] .footer-title {
-    font-size: clamp(27px, 7.6vw, 36px);
+    font-size: clamp(25px, 7.6vw, 34px);
     line-height: 1.12;
   }
 
@@ -2352,7 +2352,7 @@ html[lang="ka"] .button-row .btn {
 
   html[lang="ka"] .section-title,
   html[lang="ka"] .footer-title {
-    font-size: clamp(24px, 7.8vw, 32px);
+    font-size: clamp(22px, 7.8vw, 30px);
   }
 
   html[lang="ka"] .panel-title {

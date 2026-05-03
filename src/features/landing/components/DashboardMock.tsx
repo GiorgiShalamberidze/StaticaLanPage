@@ -24,7 +24,7 @@ export function DashboardMock({ copy }: DashboardMockProps) {
       </defs>
       <rect width="1200" height="740" fill="var(--card)" />
       <rect width="220" height="740" fill="var(--paper)" />
-      <text x="28" y="40" style={displayFont} fontSize="22" fill="var(--ink)">Statica</text>
+      <text x="28" y="40" style={displayFont} fontSize="20" fill="var(--ink)">Statica</text>
       <circle cx="190" cy="36" r="3" fill="var(--accent)" />
       {copy.sidebar.map((label, index) => (
         <g key={label} transform={`translate(20, ${90 + index * 36})`}>
@@ -37,17 +37,16 @@ export function DashboardMock({ copy }: DashboardMockProps) {
       ))}
       <line x1="220" y1="64" x2="1200" y2="64" stroke="var(--line)" />
       <text x="248" y="40" style={monoFont} fontSize="11" fill="var(--ink-3)" letterSpacing="0.1em">{copy.overviewToday}</text>
-      <text x="248" y="56" style={displayFont} fontSize="20" fill="var(--ink)">{copy.snapshotTitle}</text>
-      <rect x="700" y="22" width="320" height="28" rx="6" fill="var(--bg)" stroke="var(--line)" />
+      <rect x="700" y="22" width="300" height="28" rx="6" fill="var(--bg)" stroke="var(--line)" />
       <text x="716" y="40" style={bodyFont} fontSize="12" fill="var(--ink-3)">{copy.searchPlaceholder}</text>
-      <rect x="1040" y="22" width="60" height="28" rx="6" fill="var(--ink)" />
-      <text x="1070" y="40" textAnchor="middle" style={bodyFont} fontSize="11" fill="var(--bg)">{copy.live}</text>
+      <rect x="1020" y="22" width="92" height="28" rx="6" fill="var(--ink)" />
+      <text x="1066" y="40" textAnchor="middle" style={bodyFont} fontSize="11" fill="var(--bg)">{copy.live}</text>
 
       {copy.cards.map((card, index) => (
         <g key={card.label} transform={`translate(${248 + index * 195}, 84)`}>
           <rect width="180" height="120" rx="8" fill="var(--bg)" stroke="var(--line)" />
           <text x="14" y="22" style={monoFont} fontSize="10" fill="var(--ink-3)" letterSpacing="0.1em">{card.label.toUpperCase()}</text>
-          <text x="14" y="62" style={displayFont} fontSize="34" fill="var(--ink)">{card.value}</text>
+          <text x="14" y="62" style={displayFont} fontSize="32" fill="var(--ink)">{card.value}</text>
           <text x="14" y="84" style={monoFont} fontSize="11" fill={card.color}>{card.delta}</text>
           <path d={pointsToPath((index % 2 === 0 ? wave : wave2).slice(0, 30), 70, 40, 10)} transform="translate(96, 50)" fill="none" stroke={card.color} strokeWidth="1.5" />
         </g>
@@ -56,7 +55,7 @@ export function DashboardMock({ copy }: DashboardMockProps) {
       <g transform="translate(248, 220)">
         <rect width="600" height="280" rx="8" fill="var(--bg)" stroke="var(--line)" />
         <text x="20" y="28" style={monoFont} fontSize="10" fill="var(--ink-3)" letterSpacing="0.12em">{copy.recordFlowLabel}</text>
-        <text x="20" y="58" style={displayFont} fontSize="22" fill="var(--ink)">{copy.recordFlowTitle}</text>
+        <text x="20" y="58" style={displayFont} fontSize="20" fill="var(--ink)">{copy.recordFlowTitle}</text>
         <g transform="translate(380, 24)">
           <circle r="4" fill="var(--accent)" /><text x="10" y="4" style={bodyFont} fontSize="11" fill="var(--ink-2)">{copy.recordFlowLegend[0]}</text>
           <circle cx="80" r="4" fill="var(--accent-3)" /><text x="90" y="4" style={bodyFont} fontSize="11" fill="var(--ink-2)">{copy.recordFlowLegend[1]}</text>
@@ -73,7 +72,7 @@ export function DashboardMock({ copy }: DashboardMockProps) {
       <g transform="translate(868, 220)">
         <rect width="312" height="280" rx="8" fill="var(--bg)" stroke="var(--line)" />
         <text x="20" y="28" style={monoFont} fontSize="10" fill="var(--ink-3)" letterSpacing="0.12em">{copy.topReasonsLabel}</text>
-        <text x="20" y="58" style={displayFont} fontSize="22" fill="var(--ink)">{copy.topReasonsTitle}</text>
+        <text x="20" y="58" style={displayFont} fontSize="20" fill="var(--ink)">{copy.topReasonsTitle}</text>
         {copy.topReasons.map((row, index) => (
           <g key={row.name} transform={`translate(20, ${88 + index * 34})`}>
             <text x="0" y="12" style={bodyFont} fontSize="13" fill="var(--ink)">{row.name}</text>
@@ -87,7 +86,7 @@ export function DashboardMock({ copy }: DashboardMockProps) {
       <g transform="translate(248, 520)">
         <rect width="932" height="200" rx="8" fill="var(--bg)" stroke="var(--line)" />
         <text x="20" y="28" style={monoFont} fontSize="10" fill="var(--ink-3)" letterSpacing="0.12em">{copy.departmentHealthLabel}</text>
-        <text x="20" y="58" style={displayFont} fontSize="22" fill="var(--ink)">{copy.departmentHealthTitle}</text>
+        <text x="20" y="58" style={displayFont} fontSize="20" fill="var(--ink)">{copy.departmentHealthTitle}</text>
         <g transform="translate(20, 80)">
           {copy.departmentHeaders.map((heading, index) => (
             <text key={heading} x={[0, 240, 360, 500, 760][index]} y="0" style={monoFont} fontSize="10" fill="var(--ink-3)" letterSpacing="0.1em">
